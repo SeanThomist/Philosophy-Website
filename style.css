@@ -504,3 +504,119 @@ footer {
 }
 
 footer em { color: var(--gold); font-style: normal; }
+
+/* ── Hamburger Button ───────────────────────────── */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 101;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Mobile Responsive ──────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Nav */
+  nav { position: relative; }
+
+  .nav-toggle { display: flex; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 62px;
+    left: 0;
+    right: 0;
+    background: var(--navy-deep);
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 0 1rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+    z-index: 100;
+  }
+
+  .nav-links.open { display: flex; }
+
+  .nav-links li { width: 100%; }
+
+  .nav-links a {
+    display: block;
+    padding: 0.85rem 2rem;
+    font-size: 0.9rem;
+  }
+
+  .nav-links a::after { display: none; }
+
+  /* Hero */
+  #home {
+    padding: 3rem 1.5rem 3.5rem;
+    min-height: auto;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .hero-photo {
+    order: -1;
+  }
+
+  .photo-frame {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  .photo-frame::before {
+    top: -8px; left: -8px;
+    right: 8px; bottom: 8px;
+  }
+
+  .photo-frame img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero-bio { max-width: 100%; }
+
+  .hero-btns { justify-content: center; }
+
+  /* Sections */
+  section { padding: 3.5rem 1.5rem; }
+
+  .sec-title { font-size: 1.8rem; }
+
+  .hero-subtitle { font-size: 1.3rem; }
+
+  /* Research */
+  .interests-row { grid-template-columns: 1fr; gap: 1.5rem; }
+
+  /* Public Philosophy */
+  .public-grid { grid-template-columns: 1fr; }
+
+  /* CV */
+  .cv-columns { grid-template-columns: 1fr; gap: 2rem; }
+
+  /* Contact */
+  .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
