@@ -46,3 +46,16 @@ The accessible version uses a separate high-contrast palette (blue accent `#004F
 
 Main version: **Playfair Display** (headings, italic) + **Inter** (body), loaded from Google Fonts.
 Accessible version: **Inter** only.
+
+## Mobile responsiveness (main version)
+
+Added April 2026. All mobile styles live in a single `@media (max-width: 768px)` block at the bottom of `style.css`. Key behaviours:
+- Nav collapses to a hamburger button; toggled by `nav.js`
+- Hero stacks to single column with photo above text
+- All multi-column grids (research interests, public philosophy, CV, contact) collapse to one column
+
+The accessible version already handled mobile via `flex-wrap` — no hamburger needed there.
+
+## Git setup
+
+The local folder (`Claude Code website v2.0/`) is a git repo linked to `https://github.com/SeanThomist/Philosophy-Website.git`. Git user is configured locally (not globally). The `accessible/` folder and all assets are tracked and pushed alongside the HTML files.
