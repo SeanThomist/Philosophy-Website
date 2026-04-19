@@ -2,9 +2,9 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Standing instruction
+## Standing instruction — PRIMARY RULE
 
-Update this file during every session whenever a meaningful change is made — new features, structural decisions, deployment steps, or anything a future session would need to know. Push the updated CLAUDE.md to GitHub alongside the relevant code changes.
+**Update this file immediately after every meaningful change, not at the end of the session.** Do not batch updates. Each time a feature is added, a decision is made, or a convention is established, update CLAUDE.md before moving on. Push the updated CLAUDE.md to GitHub alongside the relevant code changes. If asked whether CLAUDE.md is current, it should always be.
 
 ## Deployment
 
