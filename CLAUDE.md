@@ -78,6 +78,19 @@ xelatex main.tex
 cp main.pdf "../../Claude Code website v2.0/sean-maroney-cv.pdf"
 ```
 
+## Favicon
+
+`favicon.svg` — a φ (phi) character in terracotta (`#D4623E`) on navy (`#1A1714`), linked in the `<head>` of all 5 main pages. Not added to the accessible version.
+
+## LaTeX CV — key conventions
+
+- The LaTeX source is at `../sean_maroney_cv_latex/sean_cv/`. Files: `main.tex`, `title.tex`, `education.tex`, `publications.tex`, `employment.tex`, `service.tex`, `honors.tex`, `talks.tex`, `languages.tex`, `extra.tex`, `prometheus_cv.cls`.
+- `\datedsubsection` — fuller entries (education, employment); has 3.5ex spacing before each item.
+- `\datedsubsectionnarrow` — compact entries (talks, honors, service, creative arts); 0pt spacing before. Use this for denser sections.
+- Speaking engagements: talk title is argument 3, venue is argument 4 (title is primary, venue subordinate).
+- `prometheus_cv.cls` has been modified: entries with a non-blank 4th argument get `\vspace{0.7ex}` after the description to visually separate grouped entries.
+- The PDF must be open in a viewer when recompiling — close it first or xelatex will fail with a file-lock error.
+
 ## Git setup
 
 The local folder (`Claude Code website v2.0/`) is a git repo linked to `https://github.com/SeanThomist/Philosophy-Website.git`. Git user is configured locally (not globally). The `accessible/` folder and all assets are tracked and pushed alongside the HTML files.
