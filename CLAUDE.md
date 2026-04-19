@@ -64,6 +64,16 @@ The accessible version already handled mobile via `flex-wrap` — no hamburger n
 
 In `research.html`, conference presentations use a two-level hierarchy: the talk title is the primary text, and the venue/conference is wrapped in `<span class="conf-meta">` which renders as a smaller muted block below. The `.conf-meta` style is defined in `style.css`.
 
+## CV PDF
+
+The downloadable CV is compiled from LaTeX source at `../sean_maroney_cv_latex/sean_cv/main.tex` (relative to the website root). Must be compiled with **xelatex** (not pdflatex — uses fontspec). After compiling, copy `main.pdf` to `sean-maroney-cv.pdf` in the website root and push.
+
+```bash
+cd "../sean_maroney_cv_latex/sean_cv"
+xelatex main.tex
+cp main.pdf "../../Claude Code website v2.0/sean-maroney-cv.pdf"
+```
+
 ## Git setup
 
 The local folder (`Claude Code website v2.0/`) is a git repo linked to `https://github.com/SeanThomist/Philosophy-Website.git`. Git user is configured locally (not globally). The `accessible/` folder and all assets are tracked and pushed alongside the HTML files.
