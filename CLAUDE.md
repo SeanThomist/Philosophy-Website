@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Standing instruction
+
+Update this file during every session whenever a meaningful change is made — new features, structural decisions, deployment steps, or anything a future session would need to know. Push the updated CLAUDE.md to GitHub alongside the relevant code changes.
+
 ## Deployment
 
 This is a static HTML/CSS/JS site hosted on GitHub Pages at **seanmaroney.com**.
