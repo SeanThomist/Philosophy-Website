@@ -60,6 +60,10 @@ Added April 2026. All mobile styles live in a single `@media (max-width: 768px)`
 
 The accessible version already handled mobile via `flex-wrap` — no hamburger needed there.
 
+## Conference presentation formatting
+
+In `research.html`, conference presentations use a two-level hierarchy: the talk title is the primary text, and the venue/conference is wrapped in `<span class="conf-meta">` which renders as a smaller muted block below. The `.conf-meta` style is defined in `style.css`.
+
 ## Git setup
 
 The local folder (`Claude Code website v2.0/`) is a git repo linked to `https://github.com/SeanThomist/Philosophy-Website.git`. Git user is configured locally (not globally). The `accessible/` folder and all assets are tracked and pushed alongside the HTML files.

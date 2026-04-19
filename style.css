@@ -261,6 +261,13 @@ section {
   border-left: 2px solid var(--gold);
 }
 
+.conf-meta {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.2rem;
+}
+
 .bib-list a {
   color: var(--navy);
   font-weight: 600;
