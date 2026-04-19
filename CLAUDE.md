@@ -60,6 +60,10 @@ Added April 2026. All mobile styles live in a single `@media (max-width: 768px)`
 
 The accessible version already handled mobile via `flex-wrap` — no hamburger needed there.
 
+## CV page
+
+`cv.html` mirrors the full LaTeX CV (`../sean_maroney_cv_latex/sean_cv/`). Sections in order: Research interests, Education, Publications, Employment, Service, Awards & Grants, Speaking Engagements, Languages, Creative Arts. When updating the LaTeX CV, recompile with `xelatex` and reflect any content changes in `cv.html` too.
+
 ## Conference presentation formatting
 
 In `research.html`, conference presentations use a two-level hierarchy: the talk title is the primary text, and the venue/conference is wrapped in `<span class="conf-meta">` which renders as a smaller muted block below. The `.conf-meta` style is defined in `style.css`.
